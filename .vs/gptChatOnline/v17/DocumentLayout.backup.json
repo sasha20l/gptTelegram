@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Asus\\Desktop\\\u041C\u043E\u0438 \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0438\\\u0442\u0435\u043B\u0435\u0433\u0440\u0430\u043C \u0447\u0430\u0442 \u0433\u043F\u0442\\gptTelegram\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4BAFF079-A81B-4BA3-AEF7-FB668FB4045E}|gptChatOnline.csproj|c:\\users\\asus\\desktop\\\u043C\u043E\u0438 \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0438\\\u0442\u0435\u043B\u0435\u0433\u0440\u0430\u043C \u0447\u0430\u0442 \u0433\u043F\u0442\\gpttelegram\\gptchatonline.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{4BAFF079-A81B-4BA3-AEF7-FB668FB4045E}|gptChatOnline.csproj|solutionrelative:gptchatonline.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{6324226f-61b6-4f28-92ee-18d4b5fe1e48}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "gptChatOnline",
+              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\\u041C\u043E\u0438 \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0438\\\u0442\u0435\u043B\u0435\u0433\u0440\u0430\u043C \u0447\u0430\u0442 \u0433\u043F\u0442\\gptTelegram\\gptChatOnline.csproj",
+              "RelativeDocumentMoniker": "gptChatOnline.csproj",
+              "ToolTip": "C:\\Users\\Asus\\Desktop\\\u041C\u043E\u0438 \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0438\\\u0442\u0435\u043B\u0435\u0433\u0440\u0430\u043C \u0447\u0430\u0442 \u0433\u043F\u0442\\gptTelegram\\gptChatOnline.csproj",
+              "RelativeToolTip": "gptChatOnline.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-04-11T19:25:13.562Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
