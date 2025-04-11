@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "g2bzqw9H5ryoQs3drjp+PPYP9BIpmyJubfpzJ9ibbVc=",
+  "Source": "gptChatOnline",
+  "BasePath": "_content/gptChatOnline",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
