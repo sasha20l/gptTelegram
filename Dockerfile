@@ -2,7 +2,7 @@ FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /app
 
 #  опируем проект и восстанавливаем зависимости
-COPY telegramGpt.csproj ./
+COPY gptChatOnline.csproj ./
 RUN dotnet restore
 
 #  опируем весь код и публикуем
