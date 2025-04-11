@@ -1,12 +1,17 @@
-FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
-WORKDIR /app
-
-FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+# Используем SDK .NET 9 Preview для сборки
+FROM mcr.microsoft.com/dotnet/sdk:9.0-preview AS build
 WORKDIR /src
-COPY . .
+
+# Копируем CSPROJ и восстанавливаем зависимости
+COPY *.csproj ./
+RUN dotnet restore
+
+# Копируем всё остальное и публикуем
+COPY . ./
 RUN dotnet publish -c Release -o /app
 
-FROM base AS final
+# Используем Runtime .NET 9 Preview для запуска
+FROM mcr.microsoft.com/dotnet/aspnet:9.0-preview AS runtime
 WORKDIR /app
 COPY --from=build /app ./
-ENTRYPOINT ["dotnet", "gptTelegram.dll"]
+ENTRYPOINT ["dotnet", "gptChatOnline.dll"]
