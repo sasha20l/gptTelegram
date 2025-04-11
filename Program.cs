@@ -1,52 +1,90 @@
-﻿using System.Net.Http.Headers;
+﻿using Telegram.Bot;
+using Telegram.Bot.Polling;
+using Telegram.Bot.Types;
+using Telegram.Bot.Types.Enums;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Text.Json;
 
-const string apiKey = "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"; // 🔐 вставь сюда токен с console.groq.com
-const string model = "llama3-70b-8192";
-const string baseUrl = "https://api.groq.com/openai/v1/chat/completions";
+const string telegramBotToken = "7899253021:AAEj4L2EIjIpZ4e2o941gjhoUSve17tynto";
+const string groqApiKey = "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";
+const string groqModel = "llama3-70b-8192";
+const string groqApiUrl = "https://api.groq.com/openai/v1/chat/completions";
 
-var httpClient = new HttpClient();
-httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", apiKey);
+var botClient = new TelegramBotClient(telegramBotToken);
 
-Console.WriteLine("🚀 Groq (Mixtral) готов! Напиши что-нибудь ('exit' для выхода):");
+using var cts = new CancellationTokenSource();
 
-while (true)
+var receiverOptions = new ReceiverOptions
 {
-  Console.Write("> ");
-  var userInput = Console.ReadLine();
+  AllowedUpdates = new[] { UpdateType.Message }
+};
 
-  if (string.IsNullOrWhiteSpace(userInput) || userInput.Equals("exit", StringComparison.OrdinalIgnoreCase))
-    break;
+botClient.StartReceiving(
+    HandleUpdateAsync,
+    HandleErrorAsync,
+    receiverOptions,
+    cancellationToken: cts.Token
+);
 
-  var requestBody = new
+Console.WriteLine("🤖 GroqBot (v19 API) запущен. Напиши что-нибудь...");
+Console.ReadLine();
+
+async Task HandleUpdateAsync(ITelegramBotClient bot, Update update, CancellationToken ct)
+{
+  if (update.Message is not { Text: { } messageText }) return;
+
+  var chatId = update.Message.Chat.Id;
+  Console.WriteLine($"📩 Пользователь: {messageText}");
+
+  await bot.SendTextMessageAsync(chatId, "✍️ Думаю...", cancellationToken: ct);
+
+  try
   {
-    model,
-    messages = new[]
-      {
-            new { role = "user", content = userInput }
-        }
+    var reply = await AskGroqAsync(messageText, ct);
+    await bot.SendTextMessageAsync(chatId, reply ?? "❌ Ошибка от Groq", cancellationToken: ct);
+  }
+  catch (Exception ex)
+  {
+    Console.WriteLine("Ошибка: " + ex.Message);
+    await bot.SendTextMessageAsync(chatId, "⚠️ Ошибка при ответе.", cancellationToken: ct);
+  }
+}
+
+Task HandleErrorAsync(ITelegramBotClient bot, Exception ex, CancellationToken ct)
+{
+  Console.WriteLine($"❌ Ошибка Telegram API: {ex.Message}");
+  return Task.CompletedTask;
+}
+
+async Task<string?> AskGroqAsync(string prompt, CancellationToken ct)
+{
+  var http = new HttpClient();
+  http.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", groqApiKey);
+
+  var body = new
+  {
+    model = groqModel,
+    messages = new[] { new { role = "user", content = prompt } }
   };
 
-  var content = new StringContent(JsonSerializer.Serialize(requestBody), Encoding.UTF8, "application/json");
+  var content = new StringContent(JsonSerializer.Serialize(body), Encoding.UTF8, "application/json");
+  var response = await http.PostAsync(groqApiUrl, content, ct);
 
-  var response = await httpClient.PostAsync(baseUrl, content);
-  var json = await response.Content.ReadAsStringAsync();
+  var json = await response.Content.ReadAsStringAsync(ct);
+  Console.WriteLine("📦 Ответ Groq:\n" + json);
 
   using var doc = JsonDocument.Parse(json);
 
   if (doc.RootElement.TryGetProperty("choices", out var choices))
   {
-    var reply = choices[0].GetProperty("message").GetProperty("content").GetString();
-    Console.WriteLine($"\n🤖 Groq: {reply}\n");
+    return choices[0].GetProperty("message").GetProperty("content").GetString();
   }
-  else if (doc.RootElement.TryGetProperty("error", out var error))
+
+  if (doc.RootElement.TryGetProperty("error", out var err))
   {
-    var message = error.GetProperty("message").GetString();
-    Console.WriteLine($"\n❌ Ошибка от Groq API: {message}");
+    return "❌ Groq: " + err.GetProperty("message").GetString();
   }
-  else
-  {
-    Console.WriteLine("❓ Неизвестный ответ от Groq:\n" + json);
-  }
+
+  return "❓ Неизвестный ответ от Groq.";
 }

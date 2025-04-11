@@ -11,12 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("chatGPTtest")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("gptChatOnline")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
-[assembly: System.Reflection.AssemblyProductAttribute("chatGPTtest")]
-[assembly: System.Reflection.AssemblyTitleAttribute("chatGPTtest")]
+[assembly: System.Reflection.AssemblyProductAttribute("gptChatOnline")]
+[assembly: System.Reflection.AssemblyTitleAttribute("gptChatOnline")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // Создано классом WriteCodeFragment MSBuild.
