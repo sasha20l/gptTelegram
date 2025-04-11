@@ -1,16 +1,16 @@
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /app
 
-# Копируем проект и восстанавливаем зависимости
+# ?? Имя файла исправлено на корректное название csproj
 COPY gptChatOnline.csproj ./
 RUN dotnet restore
 
-# Копируем весь код и публикуем
 COPY . ./
 RUN dotnet publish -c Release -o out
 
-# Финальный образ
 FROM mcr.microsoft.com/dotnet/runtime:8.0
 WORKDIR /app
 COPY --from=build /app/out ./
+# ?? DLL также должна соответствовать имени проекта
 ENTRYPOINT ["dotnet", "gptChatOnline.dll"]
+
