@@ -6,20 +6,26 @@ using System.Net.Http.Headers;
 using System.Text;
 using System.Text.Json;
 
+
 const string telegramBotToken = "7899253021:AAEj4L2EIjIpZ4e2o941gjhoUSve17tynto";
 const string groqApiKey = "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";
 const string groqModel = "llama3-70b-8192";
 const string groqApiUrl = "https://api.groq.com/openai/v1/chat/completions";
 
 var botClient = new TelegramBotClient(telegramBotToken);
-
 using var cts = new CancellationTokenSource();
 
+// 🔧 1. Удаляем Webhook (если был установлен раньше)
+await botClient.DeleteWebhookAsync();
+Console.WriteLine("✅ Webhook удалён (если был). Запускаем Polling...");
+
+// Настройки
 var receiverOptions = new ReceiverOptions
 {
-  AllowedUpdates = new[] { UpdateType.Message }
+  AllowedUpdates = Array.Empty<UpdateType>() // получаем все типы
 };
 
+// 🔄 Запуск
 botClient.StartReceiving(
     HandleUpdateAsync,
     HandleErrorAsync,
@@ -30,33 +36,52 @@ botClient.StartReceiving(
 Console.WriteLine("🤖 GroqBot (v19 API) запущен. Напиши что-нибудь...");
 Console.ReadLine();
 
+// 📩 Обработка входящих сообщений
 async Task HandleUpdateAsync(ITelegramBotClient bot, Update update, CancellationToken ct)
 {
-  if (update.Message is not { Text: { } messageText }) return;
+  Console.WriteLine("🔔 Получено обновление");
 
-  var chatId = update.Message.Chat.Id;
-  Console.WriteLine($"📩 Пользователь: {messageText}");
+  if (update.Type != UpdateType.Message || update.Message is null)
+  {
+    Console.WriteLine("⚠️ Не сообщение — пропускаем.");
+    return;
+  }
 
+  var message = update.Message;
+  var chatId = message.Chat.Id;
+
+  Console.WriteLine($"📨 От {chatId}: {message.Text}");
+
+  // 💬 Обработка команд
+  if (message.Text == "/start" || message.Text == "/help")
+  {
+    await bot.SendTextMessageAsync(chatId, "👋 Привет! Напиши вопрос, и я попробую ответить через Groq.", cancellationToken: ct);
+    return;
+  }
+
+  // ✍️ Отвечаем
   await bot.SendTextMessageAsync(chatId, "✍️ Думаю...", cancellationToken: ct);
 
   try
   {
-    var reply = await AskGroqAsync(messageText, ct);
+    var reply = await AskGroqAsync(message.Text, ct);
     await bot.SendTextMessageAsync(chatId, reply ?? "❌ Ошибка от Groq", cancellationToken: ct);
   }
   catch (Exception ex)
   {
-    Console.WriteLine("Ошибка: " + ex.Message);
-    await bot.SendTextMessageAsync(chatId, "⚠️ Ошибка при ответе.", cancellationToken: ct);
+    Console.WriteLine("❌ Ошибка при обработке запроса: " + ex.Message);
+    await bot.SendTextMessageAsync(chatId, "⚠️ Произошла ошибка при получении ответа.", cancellationToken: ct);
   }
 }
 
+// ❗ Ошибки Telegram API
 Task HandleErrorAsync(ITelegramBotClient bot, Exception ex, CancellationToken ct)
 {
-  Console.WriteLine($"❌ Ошибка Telegram API: {ex.Message}");
+  Console.WriteLine($"❌ Telegram Error: {ex.Message}");
   return Task.CompletedTask;
 }
 
+// 🤖 Запрос в Groq
 async Task<string?> AskGroqAsync(string prompt, CancellationToken ct)
 {
   var http = new HttpClient();
@@ -72,7 +97,7 @@ async Task<string?> AskGroqAsync(string prompt, CancellationToken ct)
   var response = await http.PostAsync(groqApiUrl, content, ct);
 
   var json = await response.Content.ReadAsStringAsync(ct);
-  Console.WriteLine("📦 Ответ Groq:\n" + json);
+  Console.WriteLine("📦 Ответ от Groq:\n" + json);
 
   using var doc = JsonDocument.Parse(json);
 
@@ -88,3 +113,4 @@ async Task<string?> AskGroqAsync(string prompt, CancellationToken ct)
 
   return "❓ Неизвестный ответ от Groq.";
 }
+
