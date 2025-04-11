@@ -1,16 +1,12 @@
-# Этап сборки
-FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
 WORKDIR /app
 
-COPY *.csproj ./
-RUN dotnet restore
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+WORKDIR /src
+COPY . .
+RUN dotnet publish -c Release -o /app
 
-COPY . ./
-RUN dotnet publish -c Release -o out
-
-# Финальный образ (ASP.NET Core Runtime)
-FROM mcr.microsoft.com/dotnet/aspnet:9.0
+FROM base AS final
 WORKDIR /app
-COPY --from=build /app/out ./
-ENTRYPOINT ["dotnet", "gptChatOnline.dll"]
-
+COPY --from=build /app ./
+ENTRYPOINT ["dotnet", "gptTelegram.dll"]
