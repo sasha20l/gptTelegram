@@ -30,3 +30,6 @@ C:\Users\Asus\Desktop\Мои разработки\телеграм чат гпт
 C:\Users\Asus\Desktop\Мои разработки\телеграм чат гпт\gptTelegram\obj\Debug\net9.0\gptChatOnline.pdb
 C:\Users\Asus\Desktop\Мои разработки\телеграм чат гпт\gptTelegram\obj\Debug\net9.0\gptChatOnline.genruntimeconfig.cache
 C:\Users\Asus\Desktop\Мои разработки\телеграм чат гпт\gptTelegram\obj\Debug\net9.0\ref\gptChatOnline.dll
+C:\Users\Asus\Desktop\Мои разработки\телеграм чат гпт\gptTelegram\bin\Debug\net9.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\Asus\Desktop\Мои разработки\телеграм чат гпт\gptTelegram\bin\Debug\net9.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\Asus\Desktop\Мои разработки\телеграм чат гпт\gptTelegram\bin\Debug\net9.0\Newtonsoft.Json.Bson.dll
