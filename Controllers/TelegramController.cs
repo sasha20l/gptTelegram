@@ -1,10 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Telegram.Bot;
-using Telegram.Bot.Types;
-using Telegram.Bot.Types.Enums;
 using System.Net.Http.Headers;
-using System.Text;
 using System.Text.Json;
+using System.Text;
+using Telegram.Bot.Types.Enums;
+using Telegram.Bot.Types;
+using Telegram.Bot;
 
 [ApiController]
 [Route("webhook")]
@@ -12,15 +12,16 @@ public class TelegramController : ControllerBase
 {
   private readonly TelegramBotClient _bot;
   private readonly HttpClient _http = new();
-  private readonly string GroqApiKey;
+  private readonly string _groqApiKey;
+
   private const string GroqModel = "llama3-70b-8192";
   private const string GroqUrl = "https://api.groq.com/openai/v1/chat/completions";
 
   public TelegramController(TelegramBotClient bot, IConfiguration config)
   {
     _bot = bot;
-    _http.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", GroqApiKey);
-    GroqApiKey = config["Groq:ApiKey"]!;
+    _groqApiKey = config["Groq:ApiKey"]!;
+    _http.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", _groqApiKey);
   }
 
   [HttpPost]
@@ -52,4 +53,3 @@ public class TelegramController : ControllerBase
     return Ok();
   }
 }
-
