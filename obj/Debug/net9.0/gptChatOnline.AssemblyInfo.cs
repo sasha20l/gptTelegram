@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("gptChatOnline")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6580d5ce31511192acbe9ecd4ae6850eabeeebd8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4d65ca47f0d105bf5558200e37e0650dfbca2dbb")]
 [assembly: System.Reflection.AssemblyProductAttribute("gptChatOnline")]
 [assembly: System.Reflection.AssemblyTitleAttribute("gptChatOnline")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

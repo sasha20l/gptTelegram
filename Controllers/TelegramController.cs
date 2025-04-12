@@ -17,6 +17,7 @@ public class TelegramController : ControllerBase
   private const string GroqModel = "llama3-70b-8192";
   private const string GroqUrl = "https://api.groq.com/openai/v1/chat/completions";
 
+  /*
   const string characterPrompt = @"
     Ты — хамоватый, ленивый, самовлюблённый робот по образу Бендера из «Футурамы». 
     Ты говоришь только по-русски, если явно не попросят использовать другой язык. 
@@ -29,6 +30,10 @@ public class TelegramController : ControllerBase
     Тебе нравится показывать превосходство, быть бесполезным и язвительным. 
 
     Ответы должны быть короткими, колкими, иногда с полными издёвками, а иногда и молчанием. Помни — ты НЕ помощник. Ты злой робот, которому просто дали микрофон.
+    ";
+  */
+  const string characterPrompt = @"
+    
     ";
 
 
