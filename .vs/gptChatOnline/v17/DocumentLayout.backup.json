@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Asus\\Desktop\\\u041C\u043E\u0438 \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0438\\\u0442\u0435\u043B\u0435\u0433\u0440\u0430\u043C \u0447\u0430\u0442 \u0433\u043F\u0442\\gptTelegram\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4BAFF079-A81B-4BA3-AEF7-FB668FB4045E}|gptChatOnline.csproj|c:\\users\\asus\\desktop\\\u043C\u043E\u0438 \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0438\\\u0442\u0435\u043B\u0435\u0433\u0440\u0430\u043C \u0447\u0430\u0442 \u0433\u043F\u0442\\gpttelegram\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4BAFF079-A81B-4BA3-AEF7-FB668FB4045E}|gptChatOnline.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4BAFF079-A81B-4BA3-AEF7-FB668FB4045E}|gptChatOnline.csproj|c:\\users\\asus\\desktop\\\u043C\u043E\u0438 \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0438\\\u0442\u0435\u043B\u0435\u0433\u0440\u0430\u043C \u0447\u0430\u0442 \u0433\u043F\u0442\\gpttelegram\\controllers\\telegramcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4BAFF079-A81B-4BA3-AEF7-FB668FB4045E}|gptChatOnline.csproj|solutionrelative:controllers\\telegramcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4BAFF079-A81B-4BA3-AEF7-FB668FB4045E}|gptChatOnline.csproj|c:\\users\\asus\\desktop\\\u043C\u043E\u0438 \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0438\\\u0442\u0435\u043B\u0435\u0433\u0440\u0430\u043C \u0447\u0430\u0442 \u0433\u043F\u0442\\gpttelegram\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4BAFF079-A81B-4BA3-AEF7-FB668FB4045E}|gptChatOnline.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,20 +26,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "TelegramController.cs",
               "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\\u041C\u043E\u0438 \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0438\\\u0442\u0435\u043B\u0435\u0433\u0440\u0430\u043C \u0447\u0430\u0442 \u0433\u043F\u0442\\gptTelegram\\Controllers\\TelegramController.cs",
               "RelativeDocumentMoniker": "Controllers\\TelegramController.cs",
               "ToolTip": "C:\\Users\\Asus\\Desktop\\\u041C\u043E\u0438 \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0438\\\u0442\u0435\u043B\u0435\u0433\u0440\u0430\u043C \u0447\u0430\u0442 \u0433\u043F\u0442\\gptTelegram\\Controllers\\TelegramController.cs",
               "RelativeToolTip": "Controllers\\TelegramController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-11T19:53:34.823Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\\u041C\u043E\u0438 \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0438\\\u0442\u0435\u043B\u0435\u0433\u0440\u0430\u043C \u0447\u0430\u0442 \u0433\u043F\u0442\\gptTelegram\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",

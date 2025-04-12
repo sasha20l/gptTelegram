@@ -12,7 +12,7 @@ public class TelegramController : ControllerBase
 {
   private readonly TelegramBotClient _bot;
   private readonly HttpClient _http = new();
-  private const string GroqApiKey = "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"; // <-- Вставь свой ключ
+  private const string GroqApiKey = "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"; // <-- Вставь свой ключ
   private const string GroqModel = "llama3-70b-8192";
   private const string GroqUrl = "https://api.groq.com/openai/v1/chat/completions";
 
