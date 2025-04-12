@@ -3,7 +3,10 @@
 
 var builder = WebApplication.CreateBuilder(args);
 
-const string telegramToken = "7899253021:AAGpvgkcLgQi3Fp5-5K942jylVi_Xt41oDI";
+// Подключаем конфигурацию
+builder.Configuration.AddJsonFile("appsettings.Production.json", optional: true);
+
+string telegramToken = builder.Configuration["Telegram:Token"]!;
 const string webhookUrl = "https://gpttelegram-production.up.railway.app/webhook";
 
 // Добавляем TelegramBotClient

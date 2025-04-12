@@ -6,3 +6,4 @@ obj/
 *.exe
 *.dll
 *.log
+appsettings.Production.json

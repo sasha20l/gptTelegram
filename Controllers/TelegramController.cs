@@ -12,14 +12,15 @@ public class TelegramController : ControllerBase
 {
   private readonly TelegramBotClient _bot;
   private readonly HttpClient _http = new();
-  private const string GroqApiKey = "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"; // <-- Вставь свой ключ
+  private readonly string GroqApiKey;
   private const string GroqModel = "llama3-70b-8192";
   private const string GroqUrl = "https://api.groq.com/openai/v1/chat/completions";
 
-  public TelegramController(TelegramBotClient bot)
+  public TelegramController(TelegramBotClient bot, IConfiguration config)
   {
     _bot = bot;
     _http.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", GroqApiKey);
+    GroqApiKey = config["Groq:ApiKey"]!;
   }
 
   [HttpPost]
