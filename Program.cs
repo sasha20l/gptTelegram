@@ -8,7 +8,7 @@ using Telegram.Bot;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers().AddNewtonsoftJson(); // <-- Добавляем NewtonsoftJson
-builder.Services.AddSingleton(new TelegramBotClient("7899253021:AAEj4L2EIjIpZ4e2o941gjhoUSve17tynto")); // <-- Вставь токен
+builder.Services.AddSingleton(new TelegramBotClient("7899253021:AAGpvgkcLgQi3Fp5-5K942jylVi_Xt41oDI")); // <-- Вставь токен
 
 var app = builder.Build();
 
