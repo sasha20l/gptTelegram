@@ -20,7 +20,7 @@ public class TelegramController : ControllerBase
   public TelegramController(TelegramBotClient bot, IConfiguration config)
   {
     _bot = bot;
-    _groqApiKey = config["Groq:ApiKey"]!;
+    _groqApiKey = config["Groq:ApiKey"];
     _http.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", _groqApiKey);
   }
 
