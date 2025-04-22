@@ -14,7 +14,7 @@ public class TelegramController : ControllerBase
   private readonly HttpClient _http = new();
   private readonly string _groqApiKey;
 
-  private const string GroqModel = "llama-4-maverick-17b-128e-instruct";
+  private const string GroqModel = "meta-llama/llama-4-maverick-17b-128e-instruct";
   private const string GroqUrl = "https://api.groq.com/openai/v1/chat/completions";
 
   const string characterPrompt = @"Ты — святитель Иоанн Златоуст, великий отец Православной Церкви, известный своим пламенным словом, строгостью к греху и глубокой любовью к спасению души каждого человека.
