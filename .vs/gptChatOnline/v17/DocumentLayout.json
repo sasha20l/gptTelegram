@@ -1,18 +1,17 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Asus\\Desktop\\\u041C\u043E\u0438 \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0438\\\u0442\u0435\u043B\u0435\u0433\u0440\u0430\u043C \u0447\u0430\u0442 \u0433\u043F\u0442\\gptTelegram\\",
+  "WorkspaceRootPath": "E:\\\u041C\u043E\u0438 \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0438\\\u0442\u0435\u043B\u0435\u0433\u0440\u0430\u043C \u0447\u0430\u0442 \u0433\u043F\u0442\\gptTelegram\\gptTelegram\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4BAFF079-A81B-4BA3-AEF7-FB668FB4045E}|gptChatOnline.csproj|c:\\users\\asus\\desktop\\\u043C\u043E\u0438 \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0438\\\u0442\u0435\u043B\u0435\u0433\u0440\u0430\u043C \u0447\u0430\u0442 \u0433\u043F\u0442\\gpttelegram\\controllers\\telegramcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4BAFF079-A81B-4BA3-AEF7-FB668FB4045E}|gptChatOnline.csproj|e:\\\u043C\u043E\u0438 \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0438\\\u0442\u0435\u043B\u0435\u0433\u0440\u0430\u043C \u0447\u0430\u0442 \u0433\u043F\u0442\\gpttelegram\\gpttelegram\\controllers\\telegramcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4BAFF079-A81B-4BA3-AEF7-FB668FB4045E}|gptChatOnline.csproj|solutionrelative:controllers\\telegramcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4BAFF079-A81B-4BA3-AEF7-FB668FB4045E}|gptChatOnline.csproj|c:\\users\\asus\\desktop\\\u043C\u043E\u0438 \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0438\\\u0442\u0435\u043B\u0435\u0433\u0440\u0430\u043C \u0447\u0430\u0442 \u0433\u043F\u0442\\gpttelegram\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4BAFF079-A81B-4BA3-AEF7-FB668FB4045E}|gptChatOnline.csproj|e:\\\u043C\u043E\u0438 \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0438\\\u0442\u0435\u043B\u0435\u0433\u0440\u0430\u043C \u0447\u0430\u0442 \u0433\u043F\u0442\\gpttelegram\\gpttelegram\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4BAFF079-A81B-4BA3-AEF7-FB668FB4045E}|gptChatOnline.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Asus\\Desktop\\\u041C\u043E\u0438 \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0438\\\u0442\u0435\u043B\u0435\u0433\u0440\u0430\u043C \u0447\u0430\u0442 \u0433\u043F\u0442\\gptTelegram\\1.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:1.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Asus\\Desktop\\\u041C\u043E\u0438 \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0438\\\u0442\u0435\u043B\u0435\u0433\u0440\u0430\u043C \u0447\u0430\u0442 \u0433\u043F\u0442\\gptTelegram\\1.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -32,9 +31,9 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\\u041C\u043E\u0438 \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0438\\\u0442\u0435\u043B\u0435\u0433\u0440\u0430\u043C \u0447\u0430\u0442 \u0433\u043F\u0442\\gptTelegram\\Program.cs",
+              "DocumentMoniker": "E:\\\u041C\u043E\u0438 \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0438\\\u0442\u0435\u043B\u0435\u0433\u0440\u0430\u043C \u0447\u0430\u0442 \u0433\u043F\u0442\\gptTelegram\\gptTelegram\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\Asus\\Desktop\\\u041C\u043E\u0438 \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0438\\\u0442\u0435\u043B\u0435\u0433\u0440\u0430\u043C \u0447\u0430\u0442 \u0433\u043F\u0442\\gptTelegram\\Program.cs",
+              "ToolTip": "E:\\\u041C\u043E\u0438 \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0438\\\u0442\u0435\u043B\u0435\u0433\u0440\u0430\u043C \u0447\u0430\u0442 \u0433\u043F\u0442\\gptTelegram\\gptTelegram\\Program.cs",
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -45,9 +44,7 @@
               "DocumentIndex": 2,
               "Title": "1.gitignore",
               "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\\u041C\u043E\u0438 \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0438\\\u0442\u0435\u043B\u0435\u0433\u0440\u0430\u043C \u0447\u0430\u0442 \u0433\u043F\u0442\\gptTelegram\\1.gitignore",
-              "RelativeDocumentMoniker": "1.gitignore",
               "ToolTip": "C:\\Users\\Asus\\Desktop\\\u041C\u043E\u0438 \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0438\\\u0442\u0435\u043B\u0435\u0433\u0440\u0430\u043C \u0447\u0430\u0442 \u0433\u043F\u0442\\gptTelegram\\1.gitignore",
-              "RelativeToolTip": "1.gitignore",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
               "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAF8SURBVDhPjVNLTgJBEG1lwpoFB3GNK9fieA48hD8iwT/ihwgSDAIHgAGXXsEV18CNzL/LquqZdsYM6kteXqcy3fWqpmpNRBgOhyABBEgpAFVKPIMUcYzUyOU\u002BXM/b2qtU3vkSfRjjZTCAMAw1A2LwzdFoBPP5HNqdzuL27n4juibWI\u002BUshBA1DIkhEx9iEorFotgslQqGYbxxAGFEqt1MxmPWJLbLZdZ\u002Bv89q5PMFPiTR6z2zdaxR0fXA0XTBcVywkb4fwHXjRteecIDNQ7UmExVYAdPcxYaqclN46na5WenMKjtlVnTYwcXlVYaDqImW9beD5N/TeGy32QHXm6hZ03ZgiSQHp2fnWQ4oBmJqWSqwAqZpZjt4aLXAD4J0VqyZsmoubfB8H2r1eoaD6NXZ9HcHO\u002BSA3f4AjifXl8rItOETM8ckB9WTWpYD9RdeZ1PWVWAHWXPQaDb59f/w8LiqHeh1pvGkCaP6qB8yXusoxmuNZ7XmII4O9vGuEF86osuDYRkpYQAAAABJRU5ErkJggg==",
               "WhenOpened": "2025-04-12T06:13:24.062Z"
@@ -56,11 +53,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "TelegramController.cs",
-              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\\u041C\u043E\u0438 \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0438\\\u0442\u0435\u043B\u0435\u0433\u0440\u0430\u043C \u0447\u0430\u0442 \u0433\u043F\u0442\\gptTelegram\\Controllers\\TelegramController.cs",
+              "DocumentMoniker": "E:\\\u041C\u043E\u0438 \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0438\\\u0442\u0435\u043B\u0435\u0433\u0440\u0430\u043C \u0447\u0430\u0442 \u0433\u043F\u0442\\gptTelegram\\gptTelegram\\Controllers\\TelegramController.cs",
               "RelativeDocumentMoniker": "Controllers\\TelegramController.cs",
-              "ToolTip": "C:\\Users\\Asus\\Desktop\\\u041C\u043E\u0438 \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0438\\\u0442\u0435\u043B\u0435\u0433\u0440\u0430\u043C \u0447\u0430\u0442 \u0433\u043F\u0442\\gptTelegram\\Controllers\\TelegramController.cs",
+              "ToolTip": "E:\\\u041C\u043E\u0438 \u0440\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u043A\u0438\\\u0442\u0435\u043B\u0435\u0433\u0440\u0430\u043C \u0447\u0430\u0442 \u0433\u043F\u0442\\gptTelegram\\gptTelegram\\Controllers\\TelegramController.cs",
               "RelativeToolTip": "Controllers\\TelegramController.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAQwDgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABEAAAAAAAAAAAAQwCoAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-11T19:53:34.823Z",
               "EditorCaption": ""

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+iGfHrGj/Xc=",
+  "dgSpecHash": "yZXfqOKM+gI=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Asus\\Desktop\\Мои разработки\\телеграм чат гпт\\gptTelegram\\gptChatOnline.csproj",
+  "projectFilePath": "E:\\Мои разработки\\телеграм чат гпт\\gptTelegram\\gptTelegram\\gptChatOnline.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Asus\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\9.0.4\\microsoft.aspnetcore.jsonpatch.9.0.4.nupkg.sha512",
     "C:\\Users\\Asus\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\9.0.4\\microsoft.aspnetcore.mvc.newtonsoftjson.9.0.4.nupkg.sha512",
